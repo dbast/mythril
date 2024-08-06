@@ -4,7 +4,7 @@ from mythril.laser.ethereum.state.environment import Environment
 from mythril.laser.smt import Bool, BaseArray
 from typing import List, Tuple
 
-from copy import deepcopy, copy
+from copy import deepcopy
 
 
 class SummaryTrackingAnnotation(StateAnnotation):

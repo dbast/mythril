@@ -1,5 +1,4 @@
 from mythril.disassembler.disassembly import Disassembly
-from mythril.ethereum import util
 from tests import *
 import os
 

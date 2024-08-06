@@ -1,7 +1,3 @@
-import pytest
-import json
-import sys
-
 from subprocess import check_output, STDOUT
 from tests import PROJECT_DIR, TESTDATA
 

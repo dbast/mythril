@@ -11,7 +11,6 @@ from mythril.laser.smt import symbol_factory, Array, BitVec
 from mythril.laser.ethereum.state.account import Account
 from mythril.laser.ethereum.state.annotation import StateAnnotation
 from mythril.laser.ethereum.state.constraints import Constraints
-from mythril.laser.ethereum.state.transient_storage import TransientStorage
 
 if TYPE_CHECKING:
     from mythril.laser.ethereum.cfg import Node

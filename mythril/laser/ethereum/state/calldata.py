@@ -3,7 +3,7 @@
 from typing import cast, Union, Tuple, List
 
 
-from typing import Any, Union
+from typing import Any
 
 from z3 import Model, unsat, unknown
 from z3.z3types import Z3Exception

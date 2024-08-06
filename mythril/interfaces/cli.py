@@ -15,7 +15,6 @@ import coloredlogs
 import traceback
 from ast import literal_eval
 
-import mythril.support.signatures as sigs
 from argparse import ArgumentParser, Namespace, RawTextHelpFormatter
 from mythril.concolic import concolic_execution
 from mythril.exceptions import (
@@ -23,7 +22,6 @@ from mythril.exceptions import (
     CriticalError,
 )
 from mythril.laser.ethereum.transaction.symbolic import ACTORS
-from mythril.plugin.discovery import PluginDiscovery
 from mythril.plugin.loader import MythrilPluginLoader
 
 from mythril.mythril import MythrilAnalyzer, MythrilDisassembler, MythrilConfig

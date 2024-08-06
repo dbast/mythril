@@ -3,23 +3,18 @@ solc integration."""
 
 import binascii
 import json
-import sys
 import os
 import platform
 import logging
-import solc
-import re
 import typing
 
-from pathlib import Path
 from requests.exceptions import ConnectionError
 from subprocess import PIPE, Popen
 from typing import Tuple
 
 from json.decoder import JSONDecodeError
 import semantic_version as semver
-from semantic_version import Version, NpmSpec
-from pyparsing import Word, Group, Optional, ZeroOrMore, oneOf, Regex, Combine
+from pyparsing import Word, Optional, Regex, Combine
 
 from mythril.exceptions import CompilerError
 from mythril.support.support_args import args

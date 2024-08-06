@@ -9,7 +9,6 @@ publish to pypi w/o having to convert Readme.md to RST:
 """
 from setuptools import setup, find_packages
 from setuptools.command.install import install as _install
-from subprocess import check_call
 
 import sys
 import os

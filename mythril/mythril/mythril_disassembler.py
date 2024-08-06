@@ -6,12 +6,11 @@ import re
 import shutil
 import solc
 import subprocess
-import sys
 import warnings
 
 from eth_utils import int_to_big_endian
 from semantic_version import Version, NpmSpec
-from typing import List, Tuple, Optional, TYPE_CHECKING
+from typing import List, Tuple, Optional
 
 from mythril.support.support_utils import sha3, zpad
 from mythril.ethereum import util
@@ -27,7 +26,6 @@ from mythril.solidity.soliditycontract import (
     get_contracts_from_file,
     get_contracts_from_foundry,
 )
-from mythril.support.support_args import args
 
 
 def format_warning(message, category, filename, lineno, line=""):
