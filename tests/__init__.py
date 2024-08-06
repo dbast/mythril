@@ -1,7 +1,5 @@
 from pathlib import Path
 from unittest import TestCase
-import os
-import shutil
 
 TESTS_DIR = Path(__file__).parent
 PROJECT_DIR = TESTS_DIR.parent

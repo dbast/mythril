@@ -13,7 +13,7 @@ from mythril.laser.ethereum.util import get_concrete_int
 from mythril.laser.smt import (
     Array,
     BitVec,
-    Bool,
+    SMTBool as Bool,
     Concat,
     Expression,
     If,

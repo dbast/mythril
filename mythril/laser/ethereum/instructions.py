@@ -20,7 +20,7 @@ from mythril.laser.smt import (
     URem,
     SRem,
     If,
-    Bool,
+    SMTBool as Bool,
     Not,
     LShR,
     UGE,

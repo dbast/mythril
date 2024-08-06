@@ -16,7 +16,7 @@ from mythril.laser.ethereum.transaction.transaction_models import (
     tx_id_manager,
     BaseTransaction,
 )
-from mythril.laser.smt import symbol_factory, Or, Bool, BitVec
+from mythril.laser.smt import symbol_factory, Or, SMTBool as Bool, BitVec
 
 
 FUNCTION_HASH_BYTE_LENGTH = 4

@@ -130,7 +130,6 @@ def solc_exists(version):
     :return:
     """
 
-    default_binary = "/usr/bin/solc"
     if platform.system() == "Darwin":
         solcx.import_installed_solc()
     solcx.install_solc("v" + version)

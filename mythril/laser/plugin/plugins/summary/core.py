@@ -25,7 +25,7 @@ from mythril.laser.ethereum.state.environment import Environment
 from mythril.laser.ethereum.state.calldata import SymbolicCalldata
 from mythril.laser.smt import (
     Array,
-    Bool,
+    SMTBool as Bool,
     Solver,
     symbol_factory,
     Expression,
@@ -380,7 +380,6 @@ class SymbolicSummaryPlugin(LaserPlugin):
         condition = global_state.world_state.constraints.get_all_constraints()
         for constraint in tracking_annotation.entry.world_state.constraints:
             condition.remove(constraint)
-        annotations = list(global_state.get_annotations(IssueAnnotation))
         summary = SymbolicSummary(
             storage_effect=deepcopy(storage_mutations),
             balance_effect=copy(global_state.world_state.balances),

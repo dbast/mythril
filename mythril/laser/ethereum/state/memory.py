@@ -7,7 +7,7 @@ from z3 import Z3Exception
 from mythril.laser.ethereum import util
 from mythril.laser.smt import (
     BitVec,
-    Bool,
+    SMTBool as Bool,
     Concat,
     Extract,
     If,

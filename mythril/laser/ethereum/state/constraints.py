@@ -2,7 +2,7 @@
 the call graph."""
 
 from mythril.exceptions import UnsatError, SolverTimeOutException
-from mythril.laser.smt import symbol_factory, simplify, Bool
+from mythril.laser.smt import symbol_factory, simplify, SMTBool as Bool
 from mythril.support.model import get_model
 from mythril.laser.ethereum.function_managers import keccak_function_manager
 from mythril.laser.smt.model import Model

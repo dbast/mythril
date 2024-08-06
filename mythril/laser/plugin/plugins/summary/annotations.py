@@ -1,7 +1,7 @@
 from mythril.laser.ethereum.state.annotation import StateAnnotation
 from mythril.laser.ethereum.state.global_state import GlobalState
 from mythril.laser.ethereum.state.environment import Environment
-from mythril.laser.smt import Bool, BaseArray
+from mythril.laser.smt import SMTBool as Bool, BaseArray
 from typing import List, Tuple
 
 from copy import deepcopy

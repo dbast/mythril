@@ -194,17 +194,13 @@ class MythrilDisassembler:
         for file in files:
             build_info = Path(build_dir, file)
 
-            uniq_id = file if ".json" not in file else file[0:-5]
-
             with open(build_info, encoding="utf8") as file_desc:
                 loaded_json = json.load(file_desc)
 
                 targets_json = loaded_json["output"]
 
-                version_from_config = loaded_json["solcVersion"]
                 input_json = loaded_json["input"]
                 compiler = "solc" if input_json["language"] == "Solidity" else "vyper"
-                optimizer = input_json["settings"]["optimizer"]["enabled"]
 
                 if compiler == "vyper":
                     raise NotImplementedError("Support for Vyper is not implemented.")
