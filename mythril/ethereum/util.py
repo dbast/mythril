@@ -1,5 +1,6 @@
 """This module contains various utility functions regarding unit conversion and
 solc integration."""
+
 import binascii
 import json
 import sys

@@ -786,18 +786,20 @@ def execute_command(
             print("Disassembly: \n" + disassembler.contracts[0].get_creation_easm())
 
     elif args.command == SAFE_FUNCTIONS_COMMAND:
-        args.no_onchain_data = (
-            args.disable_dependency_pruning
-        ) = args.unconstrained_storage = True
+        args.no_onchain_data = args.disable_dependency_pruning = (
+            args.unconstrained_storage
+        ) = True
         args.pruning_factor = 1
         function_analyzer = MythrilAnalyzer(
             strategy=strategy, disassembler=disassembler, address=address, cmd_args=args
         )
         try:
             report = function_analyzer.fire_lasers(
-                modules=[m.strip() for m in args.modules.strip().split(",")]
-                if args.modules
-                else None,
+                modules=(
+                    [m.strip() for m in args.modules.strip().split(",")]
+                    if args.modules
+                    else None
+                ),
                 transaction_count=1,
             )
             print_function_report(disassembler, report)
@@ -860,9 +862,11 @@ def execute_command(
         else:
             try:
                 report = analyzer.fire_lasers(
-                    modules=[m.strip() for m in args.modules.strip().split(",")]
-                    if args.modules
-                    else None,
+                    modules=(
+                        [m.strip() for m in args.modules.strip().split(",")]
+                        if args.modules
+                        else None
+                    ),
                     transaction_count=args.transaction_count,
                 )
 

@@ -1,4 +1,5 @@
 """This module contains the detection code for Arbitrary jumps."""
+
 import logging
 
 from mythril.exceptions import UnsatError

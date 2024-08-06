@@ -1,4 +1,5 @@
 """This module contains a representation of the EVM's world state."""
+
 from copy import copy, deepcopy
 from random import randint
 from typing import Dict, List, Iterator, Optional, TYPE_CHECKING

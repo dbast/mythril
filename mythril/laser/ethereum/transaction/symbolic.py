@@ -1,5 +1,6 @@
 """This module contains functions setting up and executing transactions with
 symbolic values."""
+
 import logging
 from typing import Optional, List, Union
 from copy import deepcopy

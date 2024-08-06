@@ -1,4 +1,5 @@
 """This module provides classes that make up an issue report."""
+
 import base64
 import logging
 import re

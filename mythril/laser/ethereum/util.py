@@ -1,5 +1,6 @@
 """This module contains various utility conversion functions and constants for
 LASER."""
+
 import re
 from typing import Dict, List, Union, TYPE_CHECKING, cast
 

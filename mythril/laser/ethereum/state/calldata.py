@@ -1,4 +1,5 @@
 """This module declares classes to represent call data."""
+
 from typing import cast, Union, Tuple, List
 
 

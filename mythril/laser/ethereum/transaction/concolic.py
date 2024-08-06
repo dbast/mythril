@@ -1,5 +1,6 @@
 """This module contains functions to set up and execute concolic message
 calls."""
+
 import binascii
 
 from typing import List, Union

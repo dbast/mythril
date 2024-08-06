@@ -25,6 +25,7 @@ AUTHOR_MAIL = None
 REQUIRES_PYTHON = ">=3.7.0"
 here = os.path.abspath(os.path.dirname(__file__))
 
+
 # What packages are required for this module to be executed?
 def get_requirements():
     """

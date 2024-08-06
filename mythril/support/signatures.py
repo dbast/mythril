@@ -1,4 +1,5 @@
 """The Mythril function signature database."""
+
 import functools
 import logging
 import multiprocessing

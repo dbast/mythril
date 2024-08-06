@@ -1,4 +1,5 @@
 """This module implements basic symbolic execution search strategies."""
+
 from random import randrange
 from typing import List
 

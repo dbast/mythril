@@ -206,9 +206,9 @@ class SymExecWrapper:
                 dynamic_loader=dynloader,
                 contract_name=contract.name,
                 balances=world_state.balances,
-                concrete_storage=True
-                if (dynloader is not None and dynloader.active)
-                else False,
+                concrete_storage=(
+                    True if (dynloader is not None and dynloader.active) else False
+                ),
             )  # concrete_storage can get overridden by global args
 
             if dynloader is not None:

@@ -1,4 +1,5 @@
 """This module implements the main symbolic execution engine."""
+
 import logging
 from collections import defaultdict
 from copy import copy

@@ -1,4 +1,5 @@
 """This module contains the detection code for insecure delegate call usage."""
+
 import logging
 from typing import List
 

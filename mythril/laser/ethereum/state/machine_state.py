@@ -1,5 +1,6 @@
 """This module contains a representation of the EVM's machine state and its
 stack."""
+
 from copy import copy
 from typing import cast, Sized, Union, Any, List, Dict, Optional
 
