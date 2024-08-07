@@ -30,7 +30,7 @@ requests
 rlp<4,>=3
 semantic_version
 transaction>=2.2.1
-z3-solver<=4.12.5.0,>=4.8.8.0
+z3-solver>=4.8.8.0,<=4.13.0.0
 matplotlib
 pre-commit<2.21.0
 certifi>=2020.06.20
