@@ -31,6 +31,15 @@ Install from Pypi (Python 3.7-3.10):
 $ pip3 install mythril
 ```
 
+Use it via pre-commit hook (replace `$GIT_TAG` with real tag):
+
+```YAML
+- repo: https://github.com/Consensys/mythril
+  rev: $GIT_TAG
+  hooks:
+    - id: mythril
+```
+
 See the [docs](https://mythril-classic.readthedocs.io/en/master/installation.html) for more detailed instructions. 
 
 ## Usage
