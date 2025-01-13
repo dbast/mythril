@@ -23,7 +23,6 @@ instruction = Instruction("extcodehash", dynamic_loader=None)
 
 
 def test_extcodehash_no_account():
-
     # If account does not exist, return 0
     og_state.mstate.stack = [symbol_factory.BitVecVal(1, 256)]
     new_state = instruction.evaluate(og_state)[0]
@@ -31,7 +30,6 @@ def test_extcodehash_no_account():
 
 
 def test_extcodehash_no_code():
-
     # If account code does not exist, return hash of empty set.
     og_state.mstate.stack = [symbol_factory.BitVecVal(1000, 256)]
     new_state = instruction.evaluate(og_state)[0]

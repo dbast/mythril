@@ -60,7 +60,6 @@ class MutationPruner(LaserPlugin):
 
         @symbolic_vm.laser_hook("add_world_state")
         def world_state_filter_hook(global_state: GlobalState):
-
             if isinstance(
                 global_state.current_transaction, ContractCreationTransaction
             ):
@@ -74,7 +73,6 @@ class MutationPruner(LaserPlugin):
                 callvalue = global_state.environment.callvalue
 
             try:
-
                 constraints = global_state.world_state.constraints + [
                     UGT(callvalue, symbol_factory.BitVecVal(0, 256))
                 ]

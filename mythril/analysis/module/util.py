@@ -21,7 +21,6 @@ def get_detection_module_hooks(
     """
     hook_dict: Mapping[str, List[Callable]] = defaultdict(list)
     for module in modules:
-
         hooks = module.pre_hooks if hook_type == "pre" else module.post_hooks
 
         for op_code in map(lambda x: x.upper(), hooks):

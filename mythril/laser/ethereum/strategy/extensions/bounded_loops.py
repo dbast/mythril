@@ -108,7 +108,6 @@ class BoundedLoopsStrategy(BasicSearchStrategy):
         """
 
         while True:
-
             state = self.super_strategy.get_strategic_global_state()
 
             annotations = cast(

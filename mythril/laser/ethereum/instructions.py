@@ -1237,8 +1237,7 @@ class Instruction:
 
                 global_state.mstate.memory[concrete_memory_offset + i] = int(
                     code[
-                        2
-                        * (concrete_code_offset + i) : 2
+                        2 * (concrete_code_offset + i) : 2
                         * (concrete_code_offset + i + 1)
                     ],
                     16,

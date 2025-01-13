@@ -334,7 +334,6 @@ class LaserEVM:
             hook()
 
         for global_state in self.strategy:
-
             if create and self._check_create_termination():
                 log.debug("Hit create timeout, returning.")
                 return final_states + [global_state] if track_gas else None
@@ -499,7 +498,6 @@ class LaserEVM:
 
                 new_global_states = []
             else:
-
                 # First execute the post hook for the transaction ending instruction
                 self._execute_post_hook(op_code, [end_signal.global_state])
 

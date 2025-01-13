@@ -39,6 +39,5 @@ def handle_cheat_codes(
     memory_out_offset: Union[int, Expression],
     memory_out_size: Union[int, Expression],
 ):
-
     insert_ret_val(global_state)
     pass

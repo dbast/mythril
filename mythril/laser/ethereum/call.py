@@ -202,7 +202,6 @@ def native_call(
     memory_out_offset: Union[int, Expression],
     memory_out_size: Union[int, Expression],
 ) -> Optional[List[GlobalState]]:
-
     if isinstance(callee_address, BitVec) or not (
         0 < int(callee_address, 16) <= PRECOMPILE_COUNT
     ):

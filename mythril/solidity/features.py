@@ -151,7 +151,6 @@ class SolidityFeatureExtractor:
         return variables
 
     def find_variables_in_require(self, node):
-
         nodes = self.extract_nodes(node, "require")
         variables = set()
         for parent, _ in nodes:

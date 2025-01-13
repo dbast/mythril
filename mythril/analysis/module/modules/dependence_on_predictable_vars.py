@@ -66,17 +66,13 @@ class PredictableVariables(DetectionModule):
         issues = []
 
         if is_prehook():
-
             opcode = state.get_current_instruction()["opcode"]
 
             if opcode == "JUMPI":
-
                 # Look for predictable state variables in jump condition
 
                 for annotation in state.mstate.stack[-2].annotations:
-
                     if isinstance(annotation, PredictableValueAnnotation):
-
                         constraints = state.world_state.constraints
                         try:
                             transaction_sequence = solver.get_transaction_sequence(
@@ -137,7 +133,6 @@ class PredictableVariables(DetectionModule):
                         issues.append(issue)
 
             elif opcode == "BLOCKHASH":
-
                 param = state.mstate.stack[-1]
 
                 constraint = [
@@ -151,7 +146,6 @@ class PredictableVariables(DetectionModule):
                 # Why the second constraint? Because without it Z3 returns a solution where param overflows.
 
                 try:
-
                     solver.get_model(
                         state.world_state.constraints + constraint  # type: ignore
                     )

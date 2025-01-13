@@ -87,7 +87,6 @@ class SymbolicSummary:
         )
 
     def apply_summary(self, global_state: GlobalState):
-
         # Copy and apply summary
         global_state = deepcopy(global_state)
         conditions = deepcopy(self.condition)
@@ -126,7 +125,6 @@ class SymbolicSummary:
 
 
 def substitute_exprs(expression, account_id, account, global_state):
-
     a = Array("2_calldata", 256, 8)
     b = Array(f"{global_state.current_transaction.id}_calldata", 256, 8)
     expression.substitute(a, b)

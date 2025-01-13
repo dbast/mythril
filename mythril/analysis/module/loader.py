@@ -63,7 +63,6 @@ class ModuleLoader(object, metaclass=Singleton):
         result = self._modules[:]
 
         if white_list:
-
             # Sanity check
 
             available_names = [type(module).__name__ for module in result]

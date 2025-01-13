@@ -56,7 +56,6 @@ class TxOrigin(DetectionModule):
             # We're in JUMPI prehook
 
             for annotation in state.mstate.stack[-2].annotations:
-
                 if isinstance(annotation, TxOriginAnnotation):
                     constraints = copy(state.world_state.constraints)
 
@@ -103,7 +102,6 @@ class TxOrigin(DetectionModule):
                     issues.append(issue)
 
         else:
-
             # In ORIGIN posthook
 
             state.mstate.stack[-1].annotate(TxOriginAnnotation())

@@ -200,7 +200,6 @@ class IntegerArithmetics(DetectionModule):
 
     @staticmethod
     def _handle_sstore(state: GlobalState) -> None:
-
         stack = state.mstate.stack
         value = stack[-2]
 
@@ -214,7 +213,6 @@ class IntegerArithmetics(DetectionModule):
 
     @staticmethod
     def _handle_jumpi(state):
-
         stack = state.mstate.stack
         value = stack[-2]
 
@@ -226,7 +224,6 @@ class IntegerArithmetics(DetectionModule):
 
     @staticmethod
     def _handle_call(state):
-
         stack = state.mstate.stack
         value = stack[-3]
 
@@ -250,7 +247,6 @@ class IntegerArithmetics(DetectionModule):
         state_annotation = _get_overflowunderflow_state_annotation(state)
 
         for element in state.mstate.memory[offset : offset + length]:
-
             if not isinstance(element, Expression):
                 continue
 
@@ -259,11 +255,9 @@ class IntegerArithmetics(DetectionModule):
                     state_annotation.overflowing_state_annotations.add(annotation)
 
     def _handle_transaction_end(self, state: GlobalState) -> List[Issue]:
-
         state_annotation = _get_overflowunderflow_state_annotation(state)
         issues = []
         for annotation in state_annotation.overflowing_state_annotations:
-
             ostate = annotation.overflowing_state
 
             if ostate in self._ostates_unsatisfiable:
@@ -289,7 +283,6 @@ class IntegerArithmetics(DetectionModule):
             )
 
             try:
-
                 constraints = state.world_state.constraints + [annotation.constraint]
                 transaction_sequence = solver.get_transaction_sequence(
                     state, constraints

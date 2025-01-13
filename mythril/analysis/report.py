@@ -344,7 +344,6 @@ class Report:
         _issues = []
 
         for _, issue in self.issues.items():
-
             idx = self.source.get_source_index(issue.bytecode_hash)
             try:
                 title = SWC_TO_TITLE[issue.swc_id]

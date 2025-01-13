@@ -30,7 +30,6 @@ def get_dependency_annotation(state: GlobalState) -> DependencyAnnotation:
     )
 
     if len(annotations) == 0:
-
         """FIXME: Hack for carrying over state annotations from the STOP and RETURN states of
         the previous states. The states are pushed on a stack in the world state annotation
         and popped off the stack in the subsequent iteration. This might break if any
@@ -173,7 +172,6 @@ class DependencyPruner(LaserPlugin):
 
         for location in storage_write_cache:
             for dependency in dependencies:
-
                 # Is there a known read operation along this path that matches a write in the previous transaction?
 
                 try:
@@ -319,7 +317,6 @@ class DependencyPruner(LaserPlugin):
 
         @symbolic_vm.laser_hook("add_world_state")
         def world_state_filter_hook(state: GlobalState):
-
             if isinstance(state.current_transaction, ContractCreationTransaction):
                 # Reset iteration variable
                 self.iteration = 0

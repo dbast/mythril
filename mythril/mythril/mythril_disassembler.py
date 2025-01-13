@@ -169,7 +169,6 @@ class MythrilDisassembler:
             cwd=project_root,
             executable=shutil.which(cmd[0]),
         ) as p:
-
             stdout, stderr = p.communicate()
             stdout, stderr = (stdout.decode(), stderr.decode())
             if stderr:
@@ -217,7 +216,6 @@ class MythrilDisassembler:
         return address, contracts
 
     def check_run_integer_module(self, source_file):
-
         with open(source_file, "r") as f:
             for line in f:
                 if "unchecked" in line:

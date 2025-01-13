@@ -90,7 +90,6 @@ class EVMContract(persistent.Persistent):
         tokens = re.split(r"\s+(and|or|not)\s+", expression, re.IGNORECASE)
 
         for token in tokens:
-
             if token in ("and", "or", "not"):
                 str_eval += " " + token + " "
                 continue
@@ -108,7 +107,6 @@ class EVMContract(persistent.Persistent):
             m = re.match(r"^func#([a-zA-Z0-9\s_,(\\)\[\]]+)#$", token)
 
             if m:
-
                 sign_hash = "0x" + sha3(m.group(1))[:4].hex()
                 str_eval += '"' + sign_hash + '" in self.disassembly.func_hashes'
 

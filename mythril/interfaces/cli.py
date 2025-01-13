@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """mythril.py: Bug hunting on the Ethereum blockchain
 
-   http://www.github.com/ConsenSys/mythril
+http://www.github.com/ConsenSys/mythril
 """
 
 import argparse
@@ -840,7 +840,6 @@ def execute_command(
                 exit_with_error(args.outform, "Error saving graph: " + str(e))
 
         elif args.statespace_json:
-
             if not analyzer.contracts:
                 exit_with_error(
                     args.outform, "input files do not contain any valid contracts"

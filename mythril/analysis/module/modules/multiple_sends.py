@@ -63,7 +63,6 @@ class MultipleSends(DetectionModule):
             call_offsets.append(state.get_current_instruction()["address"])
 
         else:  # RETURN or STOP
-
             for offset in call_offsets[1:]:
                 try:
                     transaction_sequence = get_transaction_sequence(

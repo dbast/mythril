@@ -68,7 +68,6 @@ def get_serializable_statespace(statespace):
         i += 1
 
     for node_key in statespace.nodes:
-
         node = statespace.nodes[node_key]
 
         code = node.get_cfg_dict()["code"]
@@ -139,11 +138,9 @@ def get_serializable_statespace(statespace):
         nodes.append(s_node)
 
     for edge in statespace.edges:
-
         if edge.condition is None:
             label = ""
         else:
-
             try:
                 label = str(simplify(edge.condition)).replace("\n", "")
             except Z3Exception:

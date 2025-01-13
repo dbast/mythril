@@ -32,7 +32,6 @@ class SummaryTrackingAnnotation(StateAnnotation):
         self.code = code
 
     def __copy__(self):
-
         annotation = SummaryTrackingAnnotation(
             entry=self.entry,
             storage_pairs=deepcopy(self.storage_pairs),

@@ -157,7 +157,6 @@ def get_contracts_from_foundry(input_file, foundry_json):
                 "deployedBytecode"
             ]["object"]
         ):
-
             yield SolidityContract(
                 input_file=input_file,
                 name=contract_name,
@@ -178,7 +177,6 @@ class SolidityContract(EVMContract):
         solc_binary="solc",
         solc_data=None,
     ):
-
         if solc_data is None:
             data = get_solc_json(
                 input_file,

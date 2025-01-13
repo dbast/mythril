@@ -252,17 +252,14 @@ class SymExecWrapper:
         self.calls: List[Call] = []
 
         for key in self.nodes:
-
             state_index = 0
 
             for state in self.nodes[key].states:
-
                 instruction = state.get_current_instruction()
 
                 op = instruction["opcode"]
 
                 if op in ("CALL", "CALLCODE", "DELEGATECALL", "STATICCALL"):
-
                     stack = state.mstate.stack
 
                     if op in ("CALL", "CALLCODE"):

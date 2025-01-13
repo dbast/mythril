@@ -24,7 +24,6 @@ class MachineStackTest(BaseTestCase):
 
     @staticmethod
     def test_mstack_append_multiple_elements():
-
         mstack = MachineStack()
 
         for i in range(mstack.STACK_LIMIT):

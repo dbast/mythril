@@ -1,4 +1,4 @@
-""" Mythril Detection Modules
+"""Mythril Detection Modules
 
 This module includes an definition of the DetectionModule interface.
 DetectionModules implement different analysis rules to find weaknesses and vulnerabilities.

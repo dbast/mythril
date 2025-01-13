@@ -68,7 +68,6 @@ def load_test_data(designations):
     return_data = []
     for designation in designations:
         for file_reference in (evm_test_dir / designation).iterdir():
-
             with file_reference.open() as file:
                 top_level = json.load(file)
 
@@ -113,7 +112,6 @@ def test_vmtest(
     gas_used: int,
     post_condition: dict,
 ) -> None:
-
     # Arrange
     if test_name in ignored_test_names:
         return

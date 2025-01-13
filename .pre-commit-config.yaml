@@ -6,21 +6,20 @@
 #   pre-commit autoupdate
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
     -   id: check-toml
     -   id: check-yaml
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.1
+    rev: v0.9.1
     hooks:
+    # lint & attempt to correct failures
     -   id: ruff
         args: [--fix, --show-fixes]
--   repo: https://github.com/psf/black
-    rev: 24.8.0
-    hooks:
-    -   id: black
+    # compatible replacement for black
+    -   id: ruff-format
 -   repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.8.0-1
+    rev: v3.10.0-2
     hooks:
     -   id: shfmt
         args: [--write, --indent, '4']
@@ -38,7 +37,7 @@ repos:
     -   id: pretty-format-toml
         args: [--autofix]
 -   repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.29.1
+    rev: 0.31.0
     hooks:
     -   id: check-circle-ci
     -   id: check-github-workflows
